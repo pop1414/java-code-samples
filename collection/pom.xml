@@ -1,0 +1,20 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.example</groupId>
+    <artifactId>java-code-samples</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>collection</artifactId>
+  <packaging>pom</packaging>
+  <name>collection</name>
+  <description>集合框架的核心类型与工具</description>
+  <modules>
+    <module>list</module>
+    <module>set</module>
+    <module>map</module>
+    <module>queue</module>
+    <module>util</module>
+  </modules>
+</project>

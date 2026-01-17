@@ -1,0 +1,19 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.example</groupId>
+    <artifactId>java-code-samples</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>functional-and-stream</artifactId>
+  <packaging>pom</packaging>
+  <name>functional-and-stream</name>
+  <description>函数式编程与 Stream 流处理</description>
+  <modules>
+    <module>lambda</module>
+    <module>functional-interface</module>
+    <module>stream-basic</module>
+    <module>stream-advanced</module>
+  </modules>
+</project>

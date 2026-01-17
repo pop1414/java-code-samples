@@ -1,0 +1,18 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.example</groupId>
+    <artifactId>java-code-samples</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>framework-basis</artifactId>
+  <packaging>pom</packaging>
+  <name>framework-basis</name>
+  <description>框架底层原理与常用机制</description>
+  <modules>
+    <module>spring-core</module>
+    <module>mybatis</module>
+    <module>dynamic-proxy</module>
+  </modules>
+</project>
