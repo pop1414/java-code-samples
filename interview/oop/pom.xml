@@ -6,7 +6,7 @@
     <artifactId>interview</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
-  <artifactId>oop</artifactId>
+  <artifactId>interview-oop</artifactId>
   <packaging>jar</packaging>
   <name>interview - oop</name>
   <description>OOP 高频题：多态、抽象类 vs 接口</description>

@@ -6,7 +6,7 @@
     <artifactId>interview</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
-  <artifactId>concurrent</artifactId>
+  <artifactId>interview-concurrent</artifactId>
   <packaging>jar</packaging>
   <name>interview - concurrent</name>
   <description>并发高频题：死锁、线程池参数、volatile 原理</description>
