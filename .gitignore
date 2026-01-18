@@ -1,0 +1,38 @@
+# Maven build outputs
+target/
+*/target/
+dependency-reduced-pom.xml
+
+# Java artifacts
+*.class
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+.project
+.classpath
+.settings/
+.factorypath
+.buildpath
+
+# VS Code
+.vscode/
+
+# Python helpers
+__pycache__/
+*.pyc
+*.pyo
+.mypy_cache/
+.pytest_cache/
+
+# Logs and temp files
+*.log
+*.pid
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
