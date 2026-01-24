@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace：必须和Mapper接口的全类名一致 -->
+<mapper namespace="com.spike.mapper.UserMapper">
+    <!-- 结果映射：把数据库字段和实体类属性对应（解决字段名和属性名不一致） -->
+    <resultMap type="com.spike.entity.User" id="UserResultMap">
+        <result column="id" jdbcType="BIGINT" property="id"/>
+        <result column="username" jdbcType="VARCHAR" property="userName"/>
+        <result column="password" jdbcType="VARCHAR" property="password"/>
+        <result column="email" jdbcType="VARCHAR" property="email"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+    </resultMap>
+
+    <!-- findById -->
+    <!-- 1. 根据ID查询：id对应接口方法名，parameterType是参数类型，resultMap是结果映射 -->
+    <select id="findById" parameterType="java.lang.Long" resultMap="UserResultMap">
+        SELECT id, username, password, email, create_time, update_time
+        FROM users
+        WHERE id = #{id}
+        <!-- #{id}：MyBatis会自动替换成?，并绑定参数（对应JDBC的PreparedStatement.setXxx） -->
+    </select>
+
+
+    <!-- findAll -->
+    <!-- 2. 查询所有用户 -->
+    <select id="findAll" resultMap="UserResultMap">
+        SELECT id, username, password, email, create_time, update_time
+        FROM users
+    </select>
+
+    <!-- 插入用户的SQL -->
+    <insert id="insertUser" parameterType="com.spike.entity.User"
+            useGeneratedKeys="true" keyProperty="id">
+        <!-- 只插入需要手动传值的字段：username、password、email -->
+        <!-- create_time/update_time由数据库默认值填充，无需指定 -->
+        INSERT INTO users (username, password, email)
+        VALUES (#{userName}, #{password}, #{email})
+    </insert>
+</mapper>

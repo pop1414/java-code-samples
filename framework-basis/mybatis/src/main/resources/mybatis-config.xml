@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 环境配置：配置数据库连接信息（对应JDBC的Connection） -->
+    <environments default="development">
+        <environment id="development">
+            <!-- 事务管理器：JDBC类型（使用JDBC的事务提交/回滚） -->
+            <transactionManager type="JDBC"/>
+            <!-- 数据源：POOLED（连接池，复用Connection，避免频繁创建销毁） -->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url"
+                          value="jdbc:mysql://localhost:3306/logistics_rbac_db?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=Asia/Shanghai"/>
+                <property name="username" value="Spike"/>
+                <property name="password" value="123dingdayi"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!-- 映射器：指定Mapper.xml的位置（MyBatis会加载这里的SQL映射） -->
+    <mappers>
+        <mapper resource="mapper/UserMapper.xml"/>
+    </mappers>
+</configuration>
