@@ -9,7 +9,6 @@
   <name>Java Code Samples Encyclopedia</name>
 
   <modules>
-    <module>shared</module>
     <module>basic</module>
     <module>oop</module>
     <module>core-features</module>
@@ -74,11 +73,6 @@
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <scope>test</scope>
     </dependency>
   </dependencies>
 
